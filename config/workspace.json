@@ -1,0 +1,48 @@
+{
+  "program": "Boulder Moss Survey, a fictional ten-year field survey of moss cover on granite boulders, used here only to demonstrate the skeleton",
+  "workspace_root": "example",
+  "continuity_file": "CONTINUITY.md",
+  "findings_register": "FINDINGS.md",
+  "clocks_file": "CLOCKS.md",
+  "records_dir": "records",
+  "outbound_dir": "outbound",
+  "protected_trees": ["data/field_raw", "private_notes"],
+  "budgets": {
+    "continuity_chars": 15000,
+    "close_summary_chars": 3000,
+    "close_summaries_max": 3,
+    "launch_file_chars": 8000,
+    "brief_chars": 2500,
+    "open_finding_stale_days": 21
+  },
+  "clock_horizon_days": 30,
+  "gauge": {
+    "window_tokens": 200000,
+    "bands": {
+      "orchestrator": {"plan": 0.50, "note": 0.65, "close": 0.80, "imminent": 0.90},
+      "worker": {"plan": 0.60, "note": 0.75, "close": 0.85, "imminent": 0.92}
+    }
+  },
+  "outbound": {
+    "blocked_characters": [],
+    "process_words": [
+      "orchestrator",
+      "worker session",
+      "read-only subagent",
+      "helper agent",
+      "verification review",
+      "decision list",
+      "launch file",
+      "continuity file",
+      "findings register",
+      "close summary"
+    ],
+    "max_paragraph_words": 120
+  },
+  "agents": {
+    "types": ["fact-checker", "web-searcher", "reconciler", "evaluator", "helper"],
+    "helper_type": "helper",
+    "read_only_tools": ["read", "search", "list", "shell-read", "web-read"],
+    "spawn": {"tool_names": ["spawn_agent", "Agent", "Task"], "type_keys": ["agent_type", "subagent_type"], "model_keys": ["model", "tier"]}
+  }
+}

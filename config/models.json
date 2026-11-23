@@ -1,0 +1,8 @@
+{
+  "note": "Each agent definition in agents/ names a tier, never a model. Map each tier to the model identifier your harness uses: a model served on your own machine or a hosted one. The checks read this file and run no model.",
+  "tiers": {
+    "orchestrator": {"role": "sole write access; plans, decides what to delegate, integrates", "model": "strongest-available"},
+    "subagent": {"role": "read-only subagents: fact-checking, web search, reconciliation, evaluation", "model": "strong-subagent"},
+    "helper": {"role": "one closed task whose result one command re-derives", "model": "fast-helper"}
+  }
+}

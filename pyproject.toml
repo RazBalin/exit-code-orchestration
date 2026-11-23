@@ -1,0 +1,22 @@
+[project]
+name = "exit-code-orchestration"
+version = "1.0.0"
+description = "A generic, runnable skeleton of an architecture for AI-orchestrated research operations: checks, agent definitions, templates and a worked example"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSE-docs.md"]
+authors = [{ name = "Raz Balin" }]
+keywords = ["research operations", "AI agents", "multi-agent orchestration", "research software", "verification"]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/RazBalin/exit-code-orchestration"

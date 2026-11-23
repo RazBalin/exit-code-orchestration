@@ -1,0 +1,40 @@
+name: checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: checks and tests on Python 3.11 to 3.14
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: |
+            3.11
+            3.12
+            3.13
+            3.14
+      - name: Every check and the test suite, on each version
+        run: |
+          for v in 3.11 3.12 3.13 3.14; do
+            echo "Python $v"
+            "python$v" -B checks/run_all.py
+            "python$v" -B -m unittest discover -s tests -v
+          done
+
+  container:
+    name: the pinned container
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build the image
+        run: docker build -t exit-code-orchestration .
+      - name: Every check and the test suite inside it
+        run: docker run --rm exit-code-orchestration

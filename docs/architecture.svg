@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 504" width="960" height="504" role="img" aria-label="The Exit-Code Orchestration architecture: the investigator, the orchestrator with sole write access, the workers, the read-only subagents and a nested helper, the records, the deterministic checks, outgoing texts, and restricted paths behind the pre-tool hook."><title id="figure-title">Exit-Code Orchestration architecture</title>
+  <rect x="0" y="0" width="960" height="504" fill="#ffffff"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#1f2933">
+
+    <!-- Elbowed connector: the investigator starts each worker session -->
+    <path d="M150 44 V22 H810 V38" fill="none" stroke="#5b6775" stroke-width="1.3"/>
+    <polygon points="805,36 810,44 815,36" fill="#5b6775"/>
+    <rect x="335" y="14" width="290" height="16" fill="#ffffff"/>
+    <text x="480" y="26" text-anchor="middle" font-size="11.5" fill="#5b6775">starts each worker from its task specification</text>
+
+    <!-- Row 1 -->
+    <rect x="20" y="44" width="260" height="84" rx="2" fill="#f3f5f7" stroke="#5b6775" stroke-width="1.4"/>
+    <text x="150" y="71" text-anchor="middle" font-size="15" font-weight="700">Investigator</text>
+    <text x="150" y="92" text-anchor="middle" font-size="12">decides, sends, signs</text>
+    <text x="150" y="110" text-anchor="middle" font-size="12">decides the scientific claims</text>
+
+    <rect x="350" y="44" width="260" height="84" rx="2" fill="#e9eff6" stroke="#1f3a5f" stroke-width="1.8"/>
+    <text x="480" y="71" text-anchor="middle" font-size="15" font-weight="700" fill="#1f3a5f">Orchestrator</text>
+    <text x="480" y="92" text-anchor="middle" font-size="12">sole write access</text>
+    <text x="480" y="110" text-anchor="middle" font-size="12">plans, delegates, integrates</text>
+
+    <rect x="680" y="44" width="260" height="84" rx="2" fill="#e9eff6" stroke="#1f3a5f" stroke-width="1.8"/>
+    <text x="810" y="71" text-anchor="middle" font-size="15" font-weight="700" fill="#1f3a5f">Workers</text>
+    <text x="810" y="92" text-anchor="middle" font-size="12">one self-contained task each</text>
+    <text x="810" y="110" text-anchor="middle" font-size="12">write access to its own folder</text>
+
+    <line x1="282" y1="70" x2="342" y2="70" stroke="#5b6775" stroke-width="1.3"/>
+    <polygon points="341,65 350,70 341,75" fill="#5b6775"/>
+    <text x="315" y="62" text-anchor="middle" font-size="10.5" fill="#5b6775">answers</text>
+    <line x1="288" y1="102" x2="348" y2="102" stroke="#5b6775" stroke-width="1.3"/>
+    <polygon points="289,97 280,102 289,107" fill="#5b6775"/>
+    <text x="315" y="120" text-anchor="middle" font-size="10.5" fill="#5b6775">decision list</text>
+
+    <line x1="612" y1="104" x2="672" y2="104" stroke="#1f3a5f" stroke-width="1.5"/>
+    <polygon points="671,99 680,104 671,109" fill="#1f3a5f"/>
+    <text x="645" y="69" text-anchor="middle" font-size="10" fill="#1f3a5f">validated</text>
+    <text x="645" y="81" text-anchor="middle" font-size="10" fill="#1f3a5f">task</text>
+    <text x="645" y="93" text-anchor="middle" font-size="10" fill="#1f3a5f">specification</text>
+
+    <!-- Row 2 -->
+    <line x1="150" y1="128" x2="150" y2="178" stroke="#5b6775" stroke-width="1.3"/>
+    <polygon points="145,177 150,186 155,177" fill="#5b6775"/>
+    <text x="158" y="161" font-size="10.5" fill="#5b6775">analyzes</text>
+
+    <rect x="20" y="186" width="260" height="126" rx="2" fill="#f9efed" stroke="#a63d2f" stroke-width="1.4"/>
+    <text x="150" y="213" text-anchor="middle" font-size="15" font-weight="700" fill="#7f2a1f">Restricted paths</text>
+    <text x="150" y="236" text-anchor="middle" font-size="12">raw participant-level data</text>
+    <text x="150" y="254" text-anchor="middle" font-size="12">a personal-documents folder</text>
+    <text x="150" y="278" text-anchor="middle" font-size="12">closed to every subagent;</text>
+    <text x="150" y="296" text-anchor="middle" font-size="12">the investigator analyzes the data</text>
+
+    <line x1="315" y1="176" x2="315" y2="322" stroke="#a63d2f" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <text x="315" y="338" text-anchor="middle" font-size="10.5" fill="#a63d2f">standing rules and</text>
+    <text x="315" y="352" text-anchor="middle" font-size="10.5" fill="#a63d2f">pre-tool hook: access denied</text>
+
+    <rect x="350" y="176" width="590" height="146" rx="2" fill="#ffffff" stroke="#5b6775" stroke-width="1.4"/>
+    <text x="645" y="197" text-anchor="middle" font-size="13" font-weight="700">Read-only subagents: fixed roles, pinned to model aliases, run in parallel</text>
+
+    <rect x="363" y="210" width="134" height="50" rx="2" fill="#f3f5f7" stroke="#8a96a3"/>
+    <text x="430" y="231" text-anchor="middle" font-size="12.5" font-weight="700">Fact-checking</text>
+    <text x="430" y="249" text-anchor="middle" font-size="11">checks the brief</text>
+    <rect x="507" y="210" width="134" height="50" rx="2" fill="#f3f5f7" stroke="#8a96a3"/>
+    <text x="574" y="231" text-anchor="middle" font-size="12.5" font-weight="700">Web search</text>
+    <text x="574" y="249" text-anchor="middle" font-size="11">sources, with dates</text>
+    <rect x="651" y="210" width="134" height="50" rx="2" fill="#f3f5f7" stroke="#8a96a3"/>
+    <text x="718" y="231" text-anchor="middle" font-size="12.5" font-weight="700">Reconciliation</text>
+    <text x="718" y="249" text-anchor="middle" font-size="11">re-derives every number</text>
+    <rect x="795" y="210" width="134" height="50" rx="2" fill="#f3f5f7" stroke="#8a96a3"/>
+    <text x="862" y="231" text-anchor="middle" font-size="12.5" font-weight="700">Evaluator</text>
+    <text x="862" y="249" text-anchor="middle" font-size="11">reads the final text once</text>
+
+    <path d="M430 260 V289 H584" fill="none" stroke="#8a96a3" stroke-width="1.2"/>
+    <path d="M574 260 V289" fill="none" stroke="#8a96a3" stroke-width="1.2"/>
+    <path d="M718 260 V273" fill="none" stroke="#8a96a3" stroke-width="1.2"/>
+    <path d="M862 260 V289 H834" fill="none" stroke="#8a96a3" stroke-width="1.2"/>
+    <rect x="584" y="273" width="250" height="32" rx="2" fill="#f3f5f7" stroke="#8a96a3"/>
+    <text x="709" y="294" text-anchor="middle" font-size="11.5">Nested helper: one task, one command</text>
+
+    <line x1="430" y1="130" x2="430" y2="168" stroke="#1f3a5f" stroke-width="1.5"/>
+    <polygon points="425,167 430,176 435,167" fill="#1f3a5f"/>
+    <text x="424" y="156" text-anchor="end" font-size="10.5" fill="#1f3a5f">briefs</text>
+    <line x1="530" y1="174" x2="530" y2="138" stroke="#1f3a5f" stroke-width="1.5"/>
+    <polygon points="525,139 530,130 535,139" fill="#1f3a5f"/>
+    <text x="537" y="150" font-size="10.5" fill="#1f3a5f">evidence only: a failing check; a number with its command;</text>
+    <text x="537" y="164" font-size="10.5" fill="#1f3a5f">a file and line, or a URL with its dates</text>
+
+    <!-- Row 3 -->
+    <rect x="20" y="376" width="260" height="110" rx="2" fill="#f3f5f7" stroke="#5b6775" stroke-width="1.4"/>
+    <text x="150" y="402" text-anchor="middle" font-size="15" font-weight="700">Outgoing texts</text>
+    <text x="150" y="424" text-anchor="middle" font-size="12">linted on every build</text>
+    <text x="150" y="442" text-anchor="middle" font-size="12">one verification review when final</text>
+    <text x="150" y="460" text-anchor="middle" font-size="12">sent by the investigator</text>
+
+    <rect x="350" y="376" width="260" height="110" rx="2" fill="#eef5f4" stroke="#2c6e6a" stroke-width="1.4"/>
+    <text x="480" y="402" text-anchor="middle" font-size="15" font-weight="700" fill="#1f4f4c">Records</text>
+    <text x="480" y="424" text-anchor="middle" font-size="12">state file, handover notes</text>
+    <text x="480" y="442" text-anchor="middle" font-size="12">findings register, deadline file</text>
+    <text x="480" y="460" text-anchor="middle" font-size="12">decision log, version history</text>
+
+    <rect x="680" y="376" width="260" height="110" rx="2" fill="#eef5f4" stroke="#2c6e6a" stroke-width="1.4"/>
+    <text x="810" y="402" text-anchor="middle" font-size="15" font-weight="700" fill="#1f4f4c">Deterministic checks</text>
+    <text x="810" y="424" text-anchor="middle" font-size="12">scripts with exit codes:</text>
+    <text x="810" y="442" text-anchor="middle" font-size="12">state-file check, quality gate,</text>
+    <text x="810" y="460" text-anchor="middle" font-size="12">context gauge, Unicode lint</text>
+  </g>
+</svg>

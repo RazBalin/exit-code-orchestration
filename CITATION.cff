@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this skeleton or its method note, please cite it as below."
+type: software
+title: "Exit-Code Orchestration: an architecture of controls, records and verification for AI agents in research operations (method note and skeleton repository)"
+version: 1.0.0
+license: MIT
+abstract: "Exit-Code Orchestration: a generic, runnable skeleton of an architecture for AI-orchestrated research operations, with its method note. An orchestrator holds sole write access; workers carry self-contained tasks from validated task specifications; read-only subagents of fixed roles, pinned to model aliases, do the reading, may spawn only a helper, and return evidence rather than verdicts; decisions travel as requests with considered options whose answers form the decision log; state files, a findings register and a deadline file carry state between sessions under budgets a script checks; a context gauge plans compaction; a Unicode lint checks every outgoing text by code point. Access is bounded by design: pre-tool hooks deny every subagent access to restricted paths before a call runs, and text that agents read is treated as data, never as an instruction. In a comparison of twenty families of published systems for AI-assisted research (8 and 9 November 2026), none showed such an enforced boundary together with a stance on planted instructions in the sources read, and eleven showed part of one. The method note reports the system's operating cost in tokens, the failures its controls caught with counts over its four findings registers (3,460 items), a pilot comparison against a baseline on one locally served model, a comparison with the seven closest setups of the twenty compared, and its limitations. Written on a fictional field program so that every check passes from a fresh clone, with a test suite, continuous integration on Python 3.11 to 3.14, a pinned container and one example session recorded in a real agent harness. Model-agnostic: one configuration file maps each alias to a local or hosted model."
+authors:
+  - family-names: Balin
+    given-names: Raz
+    orcid: "https://orcid.org/0000-0001-8895-1537"
+repository-code: "https://github.com/RazBalin/exit-code-orchestration"
+keywords:
+  - Exit-Code Orchestration
+  - research operations
+  - AI agents
+  - multi-agent orchestration
+  - research software
+  - verification
+  - research records
+  - data governance
